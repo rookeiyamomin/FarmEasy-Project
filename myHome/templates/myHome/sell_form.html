@@ -1,0 +1,43 @@
+{% include 'myHome/navbar.html' %}
+
+{% block content %}
+
+
+    <!-- Main Section -->
+    <main class="formPage my-xl">
+        <div class="content-box">
+            <div class="formWrapper">
+                <br>
+                <hr>
+
+
+                <form class="form" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <center>
+                    <p>
+                        <label for="id_crop_name">Crop Name:</label>
+                        <input type="text" name="crop_name" maxlength="200" id="id_crop_name" value="">
+                    </p>
+                    <p>
+                        <label for="id_crop_quan">Crop Quantity:</label>
+                        <input type="number" name="crop_quan" id="id_crop_quan" value="">
+                    </p>
+                    <p>
+                        <label for="id_crop_price">Crop price:</label>
+                        <input type="number" name="crop_price" id="id_crop_price" value="">
+                    </p>
+                    <p>
+                        <label for="id_crop_price">Upload Crop Image: </label>
+                        <input type="file" id="avatar" name="crop_img" accept="image/png, image/jpeg">
+                    </p>
+
+
+                    <input class="btn btn--sub btn--lg  my-md" type="submit" value="Submit">
+                    </center>
+                </form>
+            </div>
+        </div>
+    </main>
+
+{% endblock content %}
+{% include 'myHome/footer.html' %}

@@ -1,0 +1,19 @@
+{% include 'myHome/navbar.html' %}
+
+{% block title %}
+<title>Registration Page</title>
+{% endblock title %}
+
+{%block content %}
+    <div class="container">
+        <br>
+        <h2>REGISTRATION PAGE</h2>
+
+        <form method="POST" class="col-6 mt-5">
+            {% csrf_token %}
+            {{ register_form.as_p }}
+           <center> <button type="submit" class="btn btn-info mt-2 mb-5">Register</button></center>
+        </form>
+    </div>
+{%endblock content %}
+{% include 'myHome/footer.html' %}

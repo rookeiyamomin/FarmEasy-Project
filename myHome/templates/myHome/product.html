@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product page</title>
+    <link rel="stylesheet" href="{% static 'css/product.css' %}">
+</head>
+<body>
+  {% include 'myHome/navbar.html' %}
+
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid mb-5">
+        <div class="container text-center py-5">
+            <h1 class="text-white display-3">Buy</h1>
+            <div class="d-inline-flex align-items-center text-white">
+                <p class="m-0"><a class="text-white" href="">Home</a></p>
+                <i class="fa fa-circle px-3"></i>
+                <p class="m-0">buy</p>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+    {%block content %} 
+    <div class="listing-section">
+        <div class="product">
+          <div class="image-box">
+            <div class="images" id="" ><img src="{{ crop.crop_img.url }}" alt=""></div>
+          </div>
+
+          <form action="{% url 'add_to_cart' %}"
+             method="POST" enctype="multipart/form-data">
+             {% csrf_token %}
+            
+            <div class="text-box">
+                <input type="text" name="crop_obj" hidden value="{{crop.id}}">
+                <h2 class="item">{{crop.crop_name}}</h2>
+                <h3 class="price">{{crop.crop_price}}/Kg</h3>
+                <p class="description">By : {{crop.crop_owner.name}}</p>
+                <label for="item-1-quantity">Quantity:</label>
+                <h3 class="price">{{crop.crop_quan}} KG</h3>
+                <button type="submit" name="item-1-button" id="item-1-button">Add to Cart</button>
+            </div>
+        </form>
+        </div>
+      </div>
+    {%endblock content %} 
+</body>
+</html>

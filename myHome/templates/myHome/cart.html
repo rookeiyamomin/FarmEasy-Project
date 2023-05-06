@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link rel="stylesheet" href="{% static 'css/product.css' %}">
+</head>
+<body>
+  {% include 'myHome/navbar.html' %}
+
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid mb-5">
+        <div class="container text-center py-5">
+            <h1 class="text-white display-3">cart</h1>
+            <div class="d-inline-flex align-items-center text-white">
+                <p class="m-0"><a class="text-white" href="">Home</a></p>
+                <i class="fa fa-circle px-3"></i>
+                <p class="m-0">Cart</p>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    
+    <div class="cart-section">
+        
+        <div class="table-heading">
+          <h2 class="cart-product">Product</h2>
+          <h2 class="cart-price">Price</h2>
+          <h2 class="cart-quantity">Quantity</h2>
+          <h2 class="cart-total">Total</h2>
+        </div>  
+        
+        {%block content %}
+        {% for obj in products %}
+        <div class="table-content">
+          <div class="cart-product">  
+            <div class="cart-image-box">
+              <div class="cart-images" id="">
+                  <img src="{{ obj.cart_obj.crop_img.url }}">
+              </div>
+            </div>
+            <h2 class="cart-item">{{obj.cart_obj.crop_name}}</h2>
+          </div>
+          <div class="cart-price">
+            <h3 class="price">{{obj.cart_obj.crop_price}}/-</h3>
+          </div>
+          <div class="cart-quantity">
+            <p class="cart-description">{{obj.cart_obj.crop_quan}} Kg</p>
+          </div>
+
+          <div class="cart-total">
+            <h3 class="price">Total : {% widthratio obj.cart_obj.crop_quan 1 obj.cart_obj.crop_price %} </h3>
+            <button type="button" class="remove" name="remove-1" id="remove-1">x</button>
+          </div>
+        </div>
+        
+        {% endfor %}
+  
+        <div class="coupon">
+          <input type="text" name="coupon" id="coupon" placeholder="COUPON CODE">
+          <button type="button" name="coupon" id="coupon">Submit</button>  
+        </div>
+        
+        <div class="checkout">
+          <button type="button" name="update" id="update">Update</button>
+          <button type="button" name="checkout" id="checkout">Total: </button>
+          <div class="final-cart-total">
+            <h3 class="price">{{ total }}</h3>
+          </div>
+        </div>
+        
+        <div class="keep-shopping">
+          <button type="button" name="keep-shopping" id="keep-shopping">Keep Shopping</button>  
+        </div>
+      </div>
+    </div>
+    <div>
+      
+  </div>
+  {%endblock content %}
+</body>
+</html>

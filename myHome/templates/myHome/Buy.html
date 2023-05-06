@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+
+<body>
+    {% include 'myHome/navbar.html' %}
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid mb-5">
+        <div class="container text-center py-5">
+            <h1 class="text-white display-3">Welcome to consumers page</h1>
+            <div class="d-inline-flex align-items-center text-white">
+                <p class="m-0"><a class="text-white" href="">Home</a></p>
+                <i class="fa fa-circle px-3"></i>
+                <p class="m-0">Buy</p>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    {%block content %} 
+        
+        <div class="container-fluid pt-5">
+            <div class="container">
+                <div class="text-center pb-2">
+                    <h6 class="text-primary text-uppercase font-weight-bold">Products</h6>
+                    <h1 class="mb-4">Shop what you wanted</h1>
+                </div>
+                {% for obj in crops %}
+                <div class="row pb-3">
+                    <div class="col-lg-3 col-md-6 text-center mb-5">
+                        <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
+                            <a href="{% url 'crop' obj.id %}">
+                                <h6 class="text-white font-weight-medium m-0">{{obj.crop_name}}</h6>
+                            </a>
+                        </div>
+                        <a href=""><p><img src="{{ obj.crop_img.url }}" alt=""></p></a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+    {%endblock content %}
+</div>
+
+{% include 'myHome/footer.html' %}
+
+</body>
+
+</html>

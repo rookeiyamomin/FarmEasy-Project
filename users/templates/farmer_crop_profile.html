@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link rel="stylesheet" href="{% static 'css/product.css' %}">
+</head>
+    <body>
+        {% include 'myHome/navbar.html' %}
+        {%block content %}
+            {% if crops %}
+                {% for obj in crops %}
+                    <div class="table-content">
+                      <div class="cart-product">
+                        <div class="cart-image-box">
+                          <img src="{{ obj.crop_img.url }}">
+                        </div>
+                        <h2 class="cart-item">{{obj.crop_name}}</h2>
+                      </div>
+                      <div class="cart-price">
+                        <h3 class="price">{{obj.crop_price}}/-</h3>
+                      </div>
+{#                      <div class="cart-price">#}
+{#                        <h3 class="cart-description">{{obj.crop_quan}} Kg</h3>#}
+{#                      </div>#}
+                        <div class="cart-price">
+                            <h3 class="price">{{obj.crop_quan}} Kg</h3>
+                        </div>
+                    </div>
+
+                    {% comment %} <h1>Get Your QR Code</h1>
+                    <img src={{obj.selling_qr_code.url}}> {% endcomment %}
+
+                {% endfor %}
+            {% else %}
+                <div>
+                    <h1 class="cart-item">Sorry!!! Your Dont Have Any Selling item.</h1>
+                </div>
+            {% endif %}
+        {%endblock content %}
+    </body>
+</html>

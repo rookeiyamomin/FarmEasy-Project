@@ -1,0 +1,14 @@
+{% include 'myHome/navbar.html' %}
+<hr>
+{%if user.is_authenticated%}
+    <h1>Hello : {{ user.username }}</h1>
+    <h1> Email : {{ user.profile.email }}</h1>
+    <h1> Phone : {{ user.profile.phone }}</h1>
+    <h1> Location : {{ user.profile.city }}, {{ user.profile.pin }}, {{ user.profile.state }}</h1>
+    <h1>Get Your QR Code</h1>
+    <img src={{user.profile.qr_code.url}}>
+    <hr>
+    <a href="{% url 'farmer_crop_profile' %}">Check Your Selling Crops</a>
+{%endif%}
+<hr>
+{% include 'myHome/footer.html' %}

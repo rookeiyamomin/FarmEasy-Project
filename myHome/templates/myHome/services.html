@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    {% include 'myHome/navbar.html' %}
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid mb-5">
+        <div class="container text-center py-5">
+            <h1 class="text-white display-3">Services</h1>
+            <div class="d-inline-flex align-items-center text-white">
+                <p class="m-0"><a class="text-white" href="">Home</a></p>
+                <i class="fa fa-circle px-3"></i>
+                <p class="m-0">service</p>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+     <!-- Services Start -->
+     <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="text-center pb-2">
+                <h6 class="text-primary text-uppercase font-weight-bold">Our Services</h6>
+                <h1 class="mb-4">"Fresh from the farm, delivered to your door."</h1>
+            </div>
+            <div class="row pb-3">
+                <div class="col-lg-3 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
+                        <a href="{% url 'sell_product'%}"><h6 class="text-white font-weight-medium m-0">Selling crops</h6></a>
+                    </div>
+                    <p>Farmer can sell crops directly to the users without any extra charges or extra selling steps</p>
+                    <a class="border-bottom text-decoration-none" href="">Read More</a>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
+                        <a href="{% url 'buy' %}"><h6 class="text-white font-weight-medium m-0">Buying crops</h6></a>
+                    </div>
+                    <p>Buyer can buy crops from the farmer directly without any extra charges or extra buying steps</p>
+                    <a class="border-bottom text-decoration-none" href="">Read More</a>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
+                       <a href="{% url 'user_to_us' %}"> <h6 class="text-white font-weight-medium m-0">Storage/Warehouses</h6></a>
+                    </div>
+                    <p>FarmEasy is responsible to transport the crop from farmer to the buyer</p>
+                    <a class="border-bottom text-decoration-none" href="">Read More</a>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
+                       <a href="#"> <h6 class="text-white font-weight-medium m-0">Farm Insurance</h6></a>
+                    </div>
+                    <p>FarmEasy is responsible to provide the farm insurance</p>
+                    <a class="border-bottom text-decoration-none" href="">Read More</a>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
+                       <a href="{% url 'jobs' %}"> <h6 class="text-white font-weight-medium m-0">Job Openings</h6> </a>
+                    </div>
+                    <p>Farmeasy is opening new slots for people to earn good amount of money</p>
+                    <a class="border-bottom text-decoration-none" href="">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+
+
+
+    {% include 'myHome/footer.html' %}
+
+</body>
+
+</html>

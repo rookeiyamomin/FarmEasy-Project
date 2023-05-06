@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>FASTER - Logistics Company Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    {% include 'myHome/navbar.html' %}
+
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid mb-5">
+        <div class="container text-center py-5">
+            <h1 class="text-white display-3"> Welcome To The Farmer Page </h1>
+            <div class="d-inline-flex align-items-center text-white">
+                <p class="m-0"><a class="text-white" href="">Home</a></p>
+                <i class="fa fa-circle px-3"></i>
+                <p class="m-0">selling</p>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <form id="crop">
+        <div>
+            <div class="col-10">
+                <label class="quantity">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Quantity in KG:</label>&emsp;&emsp;
+                <label class="price">&emsp;&emsp;&emsp;&emsp;Price:</label><br><br>
+                <label class="wheat">Wheat:</label>
+            </div>
+            <div class="col-90">
+                &emsp;&emsp;&emsp;&emsp;<input type="number" id="wheat" name="name" placeholder="Quantity in KG">
+                <input type="number" id="wprice" name="name" placeholder="Price">
+                
+            </div>
+        </div>
+        <div>
+            <div class="col-10">
+                <label for="fname">Rice:</label>
+            </div>
+            <div class="col-90">
+                &emsp;&emsp;&emsp;&emsp;<input type="number" id="rice" name="name" placeholder="Quantity in KG">
+                <input type="number" id="rprice" name="name" placeholder="Price">
+                
+            </div>
+        </div>
+        <div>
+            <div class="col-10">
+                <label for="fname">Pulse:</label>
+            </div>
+            <div class="col-90">
+                &emsp;&emsp;&emsp;&emsp;<input type="number" id="pulse" name="name" placeholder="Quantity in KG">
+                <input type="number" id="pprice" name="name" placeholder="Price">
+                
+            </div>
+        </div>
+        <div>
+            <div class="col-10">
+                <label for="fname">Spices:</label>
+            </div>
+            <div class="col-90">
+                &emsp;&emsp;&emsp;&emsp;<input type="number" id="spice" name="name" placeholder="Quantity in KG">
+                <input type="number" id="sprice" name="name" placeholder="Price">
+                
+            </div>
+        </div>
+        <div>
+            <div class="col-10">
+                <label for="fname">Vegetables:</label>
+            </div>
+            <div class="col-90">
+                &emsp;&emsp;&emsp;&emsp;<input type="number" id="veg" name="name" placeholder="Quantity in KG">
+                <input type="number" id="vprice" name="name" placeholder="Price">
+            </div>
+        </div>
+        <div>
+            <button type="submit">Proceed to sell</button>
+        </div>
+    </form>
+
+    {% include 'myHome/footer.html' %}
+
+</body>
+
+</html>

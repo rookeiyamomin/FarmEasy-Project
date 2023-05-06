@@ -1,0 +1,25 @@
+{% include 'myHome/navbar.html' %}
+{% block content %}
+    <h1>Welcome To Worker Portal</h1>
+    <!-- Main Section -->
+    <main class="formPage my-xl">
+        <div class="content-box">
+            <div class="formWrapper">
+                <br>
+                <center> <form class="form" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {%for field in form%}
+                    <div class="form__field">
+                        <label>{{field.label}}: </label>
+                        {{field}}
+                    </div><br>
+                    {%endfor%}
+                    {% comment %} {{ form.as_p }} {% endcomment %}
+                    <input class="btn btn-info mt-2 mb-5" type="submit" value="Submit/Apply" />
+                </form> </center>
+            </div>
+        </div>
+    </main>
+
+{% endblock content %}
+{% include 'myHome/footer.html' %}

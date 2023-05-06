@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<body>
+    {% include 'myHome/navbar.html' %}
+
+
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid mb-5">
+        <div class="container text-center py-5">
+            <h1 class="text-white display-3">Blog</h1>
+            <div class="d-inline-flex align-items-center text-white">
+                <p class="m-0"><a class="text-white" href="">Home</a></p>
+                <i class="fa fa-circle px-3"></i>
+                <p class="m-0">Blog</p>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+ <!-- Blog Start -->
+ <div class="container-fluid pt-5">
+    <div class="container">
+        <div class="text-center pb-2">
+            <h6 class="text-primary text-uppercase font-weight-bold">Our Blog</h6>
+            <h1 class="mb-4">Latest From Blog</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-5">
+                <div class="position-relative">
+                    <img class="img-fluid w-100" src="{% static 'image/blog-4.jpg'%}" alt="">
+                    <div class="position-absolute bg-primary d-flex flex-column align-items-center justify-content-center rounded-circle"
+                        style="width: 60px; height: 60px; bottom: -30px; right: 30px;">
+                        <h4 class="font-weight-bold mb-n1">16</h4>
+                        <small class="text-white text-uppercase">Jan</small>
+                    </div>
+                </div>
+                <div class="bg-secondary" style="padding: 30px;">
+                    <div class="d-flex mb-2">
+                        <div class="d-flex align-items-center">
+                            <img class="rounded-circle" style="width: 40px; height: 40px;" src="{% static '/image/user-1.jpg'%}" alt="">
+                            <a class="text-muted ml-2" href="">Sarbjit</a>
+                        </div>
+                        <div class="d-flex align-items-center ml-4">
+                            <i class="far fa-bookmark text-primary"></i>
+                            <a class="text-muted ml-2" href="">Reporter</a>
+                        </div>
+                    </div>
+                    <h4 class="font-weight-bold mb-3">Micro-financing beneficiary stories</h4>
+                    <p>As part of Microfinancing Project, SIF aims to improve income of farmer women who are in distress because of family situation and lack of financial support. The implementation of project started in March 2020 with partner organization Manaswini/ Manavlok. </p>
+                    <a class="border-bottom border-primary text-uppercase text-decoration-none" href="">Read More <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="position-relative">
+                    <img class="img-fluid w-100" src="{% static 'image/blog-2.jpg'%}" alt="">
+                    <div class="position-absolute bg-primary d-flex flex-column align-items-center justify-content-center rounded-circle"
+                        style="width: 60px; height: 60px; bottom: -30px; right: 30px;">
+                        <h4 class="font-weight-bold mb-n1">24</h4>
+                        <small class="text-white text-uppercase">Feb</small>
+                    </div>
+                </div>
+                <div class="bg-secondary" style="padding: 30px;">
+                    <div class="d-flex mb-3">
+                        <div class="d-flex align-items-center">
+                            <img class="rounded-circle" style="width: 40px; height: 40px;" src="{% static '/image/user-2.jpg'%}" alt="">
+                            <a class="text-muted ml-2" href="">kamlesh singh</a>
+                        </div>
+                        <div class="d-flex align-items-center ml-4">
+                            <i class="far fa-bookmark text-primary"></i>
+                            <a class="text-muted ml-2" href="">Reporter</a>
+                        </div>
+                    </div>
+                    <h4 class="font-weight-bold mb-3">Desi Cow farmers – Case Study</h4>
+                    <p>The SIF organic farming project has been implemented in 23 villages of Tumkur and Koratagere talukas of Tumkur district. The project supported by Save Indian Farmers, USA. The project objective is to motivate and support small and marginal farmers to adopt organic... </p>
+                    <a class="border-bottom border-primary text-uppercase text-decoration-none" href="">Read More <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+            <div class="col-md-6 mb-5">
+                <div class="position-relative">
+                    <img class="img-fluid w-100" src="{% static 'image/blog-3.jpg'%}" alt="">
+                    <div class="position-absolute bg-primary d-flex flex-column align-items-center justify-content-center rounded-circle"
+                        style="width: 60px; height: 60px; bottom: -30px; right: 30px;">
+                        <h4 class="font-weight-bold mb-n1">16</h4>
+                        <small class="text-white text-uppercase">Jan</small>
+                    </div>
+                </div>
+                <div class="bg-secondary" style="padding: 30px;">
+                    <div class="d-flex mb-2">
+                        <div class="d-flex align-items-center">
+                            <img class="rounded-circle" style="width: 40px; height: 40px;" src="{% static '/image/user-3.jpg'%}" alt="">
+                            <a class="text-muted ml-2" href="">Asif</a>
+                        </div>
+                        <div class="d-flex align-items-center ml-4">
+                            <i class="far fa-bookmark text-primary"></i>
+                            <a class="text-muted ml-2" href="">ABC</a>
+                        </div>
+                    </div>
+                    <h4 class="font-weight-bold mb-3">ETC</h4>
+                    <p>As part of Microfinancing Project, SIF aims to improve income of farmer women who are in distress because of family situation and lack of financial support. The implementation of project started in March 2020 with partner organization Manaswini/ Manavlok. </p>
+                    <a class="border-bottom border-primary text-uppercase text-decoration-none" href="">Read More <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-5">
+                <div class="position-relative">
+                    <img class="img-fluid w-100" src="{% static 'image/blog-1.jpg'%}" alt="">
+                    <div class="position-absolute bg-primary d-flex flex-column align-items-center justify-content-center rounded-circle"
+                        style="width: 60px; height: 60px; bottom: -30px; right: 30px;">
+                        <h4 class="font-weight-bold mb-n1">24</h4>
+                        <small class="text-white text-uppercase">Feb</small>
+                    </div>
+                </div>
+                <div class="bg-secondary" style="padding: 30px;">
+                    <div class="d-flex mb-3">
+                        <div class="d-flex align-items-center">
+                            <img class="rounded-circle" style="width: 40px; height: 40px;" src="{% static '/image/user-4.jpg'%}" alt="">
+                            <a class="text-muted ml-2" href="">Javed</a>
+                        </div>
+                        <div class="d-flex align-items-center ml-4">
+                            <i class="far fa-bookmark text-primary"></i>
+                            <a class="text-muted ml-2" href="">ABC</a>
+                        </div>
+                    </div>
+                    <h4 class="font-weight-bold mb-3">ETC</h4>
+                    <p>The SIF organic farming project has been implemented in 23 villages of Tumkur and Koratagere talukas of Tumkur district. The project supported by Save Indian Farmers, USA. The project objective is to motivate and support small and marginal farmers to adopt organic... </p>
+                    <a class="border-bottom border-primary text-uppercase text-decoration-none" href="">Read More <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Blog End -->
+
+    
+{% include 'myHome/footer.html' %}
+
+</body>
+
+</html>
